@@ -83,12 +83,20 @@ public abstract class Videos {
 		this.subtitulos = subtitulos;
 	}
 
+	/**
+	 * To string.
+	 *
+	 * @return devuelve la cadena to string autogenerada
+	 */
 	@Override
 	public String toString() {
 		return "Videos [duracion=" + duracion + ", titulo=" + titulo + ", autor=" + autor + ", likes=" + likes
 				+ ", subtitulos=" + subtitulos + "]";
 	}
 
+	/**
+	 * Metodo que incrementa en 1 los likes cada que el usuario da like
+	 */
 	public void darLike() {
 		likes++;
 	}

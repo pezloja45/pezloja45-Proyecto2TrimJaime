@@ -43,6 +43,11 @@ public class Gameplays extends Videos {
 		this.plataforma = plataforma;
 	}
 
+	/**
+	 * To string.
+	 *
+	 * @return devuelve la cadena to string autogenerada
+	 */
 	@Override
 	public String toString() {
 		return "Gameplays [plataforma=" + plataforma + ", toString()=" + super.toString() + "]";

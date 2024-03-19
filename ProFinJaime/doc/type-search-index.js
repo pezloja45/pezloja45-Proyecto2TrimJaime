@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"TuTubo","l":"AppTuTubo"},{"p":"TuTubo","l":"Canciones"},{"p":"TuTubo","l":"Gameplays"},{"p":"TuTubo","l":"ListaReproduccion"},{"p":"TuTubo","l":"OrdenarPorDuracion"},{"p":"TuTubo","l":"Videos"}];updateSearchResults();

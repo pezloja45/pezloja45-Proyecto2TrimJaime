@@ -46,6 +46,11 @@ public class Canciones extends Videos {
 		TipoCancion = tipoCancion;
 	}
 
+	/**
+	 * To string.
+	 *
+	 * @return devuelve la cadena to string autogenerada
+	 */
 	@Override
 	public String toString() {
 		return "Canciones [TipoCancion=" + TipoCancion + ", toString()=" + super.toString() + "]";

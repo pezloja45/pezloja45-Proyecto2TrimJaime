@@ -1,16 +1,35 @@
+/**
+* @author jaime
+*/
 package TuTubo;
 
 import java.util.Scanner;
 
 import TuTubo.Videos.SUBTITULOS;
 
+/**
+ * Clase Gameplays que extiende de la clase Videos
+ */
 public class Gameplays extends Videos {
 	private String plataforma;
 
+	/**
+	 * Constructor vacio por defecto
+	 */
 	public Gameplays() {
 		super();
 	}
 
+	/**
+	 * Constructor lleno por defecto
+	 * 
+	 * @param duracion
+	 * @param titulo
+	 * @param autor
+	 * @param likes
+	 * @param subtitulos
+	 * @param plataforma
+	 */
 	public Gameplays(int duracion, String titulo, String autor, int likes, SUBTITULOS subtitulos, String plataforma) {
 		super(duracion, titulo, autor, likes, subtitulos);
 		this.plataforma = plataforma;
@@ -29,6 +48,11 @@ public class Gameplays extends Videos {
 		return "Gameplays [plataforma=" + plataforma + ", toString()=" + super.toString() + "]";
 	}
 
+	/**
+	 * Metodo para la creacion de un video de tipo gameplay
+	 * 
+	 * @return gameplay
+	 */
 	public Gameplays crearGameplay() {
 		Scanner sc = new Scanner(System.in);
 		Gameplays gameplay = new Gameplays();

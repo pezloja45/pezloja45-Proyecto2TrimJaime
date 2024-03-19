@@ -1,7 +1,13 @@
+/**
+* @author jaime
+*/
 package TuTubo;
 
 import java.util.Scanner;
 
+/**
+ * Clase Canciones que extiende de la clase Videos
+ */
 public class Canciones extends Videos {
 	enum TIPOCANCION {
 		Reggaeton, Pop, Clasica
@@ -9,10 +15,23 @@ public class Canciones extends Videos {
 
 	private TIPOCANCION TipoCancion;
 
+	/**
+	 * Constructor vacio por defecto
+	 */
 	public Canciones() {
 		super();
 	}
 
+	/**
+	 * Constructor lleno por defecto
+	 * 
+	 * @param duracion
+	 * @param titulo
+	 * @param autor
+	 * @param likes
+	 * @param subtitulos
+	 * @param TipoCancion
+	 */
 	public Canciones(int duracion, String titulo, String autor, int likes, SUBTITULOS subtitulos,
 			TIPOCANCION TipoCancion) {
 		super(duracion, titulo, autor, likes, subtitulos);
@@ -32,6 +51,11 @@ public class Canciones extends Videos {
 		return "Canciones [TipoCancion=" + TipoCancion + ", toString()=" + super.toString() + "]";
 	}
 
+	/**
+	 * Metodo para la creacion de un video de tipo cancion
+	 * 
+	 * @return cancion
+	 */
 	public Canciones crearCancion() {
 		Scanner sc = new Scanner(System.in);
 		Canciones cancion = new Canciones();

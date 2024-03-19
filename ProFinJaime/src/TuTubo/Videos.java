@@ -1,10 +1,16 @@
+/**
+* @author jaime
+*/
 package TuTubo;
 
+/**
+ * Clase abstracta Videos
+ */
 public abstract class Videos {
-	private int duracion;
-	private String titulo;
-	private String autor;
-	private int likes;
+	protected int duracion;
+	protected String titulo;
+	protected String autor;
+	protected int likes;
 
 	enum SUBTITULOS {
 		SI, NO
@@ -12,6 +18,15 @@ public abstract class Videos {
 
 	private SUBTITULOS subtitulos;
 
+	/**
+	 * Constructor lleno por defecto
+	 * 
+	 * @param duracion
+	 * @param titulo
+	 * @param autor
+	 * @param likes
+	 * @param subtitulos
+	 */
 	public Videos(int duracion, String titulo, String autor, int likes, SUBTITULOS subtitulos) {
 		super();
 		this.duracion = duracion;
@@ -21,6 +36,9 @@ public abstract class Videos {
 		this.subtitulos = subtitulos;
 	}
 
+	/**
+	 * Constructor vacio por defecto
+	 */
 	public Videos() {
 		super();
 	}

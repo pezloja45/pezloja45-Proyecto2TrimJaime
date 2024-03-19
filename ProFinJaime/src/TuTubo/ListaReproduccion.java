@@ -1,40 +1,54 @@
+/**
+* @author jaime
+*/
 package TuTubo;
 
-class ListaReproduccion {
+/**
+ * Clase ListaReproduccion
+ */
+public class ListaReproduccion {
 	private Videos[] videos;
-	private int IndiceVideo;
 
+	/**
+	 * Constructor lleno por defecto
+	 * 
+	 * @param capacidadMaxima
+	 */
 	public ListaReproduccion(int capacidadMaxima) {
 		this.videos = new Videos[capacidadMaxima];
-		this.IndiceVideo = 0;
 	}
 
+	/**
+	 * Metodo que se le pasa la lista de videos y agrega el que se desee en la
+	 * primera posicion vacia
+	 * 
+	 * @param video
+	 */
 	public void agregarVideo(Videos video) {
-		if (IndiceVideo < videos.length) {
-			videos[IndiceVideo++] = video;
-		} else {
-			System.out.println("La lista de reproduccion esta llena, no hay hueco para mas elementos");
+		for (int i = 0; i < videos.length; i++) {
+			if (videos[i] == null) {
+				videos[i] = video;
+				System.out.println("Video agregado exitosamente");
+				return;
+			}
 		}
+		System.out.println("La lista de reproducción está llena, no hay espacio para más elementos");
 	}
 
 	public void eliminarVideo(Videos video) {
-		boolean encontrado = false;
-		for (int i = 0; i < IndiceVideo; i++) {
-			if (videos[i].equals(video)) {
-				encontrado = true;
-				for (int j = i; j < IndiceVideo - 1; j++) {
-					videos[j] = videos[j + 1];
-				}
-				videos[IndiceVideo - 1] = null;
-				IndiceVideo--;
-				System.out.println("Video eliminado exitosamente");
-				break;
-			}
-		}
-		if (!encontrado) {
-			System.out.println("El video no se encontró en la lista de reproducción");
-		}
+	    boolean encontrado = false;
+	    for (int i = 0; i < videos.length; i++) {
+	        if (videos[i] != null && videos[i].equals(video)) {
+	            videos[i] = null;
+	            System.out.println("Video eliminado exitosamente");
+	            encontrado = true;
+	        }
+	    }
+	    if (!encontrado) {
+	        System.out.println("El video no se encontró en la lista de reproducción");
+	    }
 	}
+
 
 	public void mostrarLista() {
 		for (Videos video : videos) {
@@ -51,4 +65,5 @@ class ListaReproduccion {
 			}
 		}
 	}
+
 }
